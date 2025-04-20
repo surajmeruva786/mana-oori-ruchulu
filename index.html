@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana Oori Ruchulu - Authentic Indian Village Cuisine</title>
+    <meta name="description" content="Experience authentic Indian village cuisine at Mana Oori Ruchulu with both vegetarian and non-vegetarian options in a traditional rustic ambiance.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header and Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Mana Oori Ruchulu</h1>
+                <p class="tagline">Authentic Indian Village Cuisine</p>
+            </div>
+            
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            
+            <nav id="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">Our Story</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="decorative-border-top"></div>
+                <h2>Experience the Taste of <span class="highlight">Indian Village</span></h2>
+                <p>Traditional recipes crafted with love and authentic spices</p>
+                <div class="cta-buttons">
+                    <a href="#menu" class="btn primary-btn">Explore Menu</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Us</a>
+                </div>
+                <div class="decorative-border-bottom"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our Story</h2>
+                    <div class="decorative-divider">
+                        <svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0,5 C25,0 25,10 50,5 C75,0 75,10 100,5" fill="none" stroke="#8B4513" stroke-width="1"/>
+                            <circle cx="50" cy="5" r="3" fill="#DA7635"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1661916077489-7dc4be254a50?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Traditional Indian cuisine" class="village-image">
+                        <div class="image-frame"></div>
+                    </div>
+                    
+                    <div class="about-text">
+                        <h3>Authentic Village <span class="highlight">Cuisine</span></h3>
+                        <p>Mana Oori Ruchulu brings the authentic flavors of traditional Indian village cuisine to your palate. Our dishes are prepared with recipes that have been passed down through generations, preserving the cultural essence of our rich culinary heritage.</p>
+                        
+                        <h3>Celebrating Our <span class="highlight">Roots</span></h3>
+                        <p>Every dish we serve is a reminder of our cultural roots and traditions. We honor the time-tested cooking methods that give our food its distinctive taste, bringing you closer to the authentic flavors that shaped our culture. Through our cuisine, we celebrate the simplicity and richness of Indian village food traditions.</p>
+                        
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-mortar-pestle"></i>
+                                <h4>Hand-Ground Spices</h4>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-fire-flame-curved"></i>
+                                <h4>Traditional Cooking</h4>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-leaf"></i>
+                                <h4>Organic Ingredients</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our Menu</h2>
+                    <div class="decorative-divider">
+                        <svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0,5 C25,0 25,10 50,5 C75,0 75,10 100,5" fill="none" stroke="#8B4513" stroke-width="1"/>
+                            <circle cx="50" cy="5" r="3" fill="#DA7635"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="menu-tabs">
+                    <button class="menu-tab active" data-category="andhra-meals">
+                        <i class="fa-solid fa-utensils"></i> Andhra Meals
+                    </button>
+                    <button class="menu-tab" data-category="biryanis">
+                        <i class="fa-solid fa-bowl-rice"></i> Biryanis
+                    </button>
+                    <button class="menu-tab" data-category="curries">
+                        <i class="fa-solid fa-drumstick-bite"></i> Andhra Curries
+                    </button>
+                    <button class="menu-tab" data-category="starters">
+                        <i class="fa-solid fa-fire"></i> Starters
+                    </button>
+                    <button class="menu-tab" data-category="extras">
+                        <i class="fa-solid fa-plus"></i> Extras
+                    </button>
+                </div>
+                
+                <div class="menu-content">
+                    <!-- Andhra Meals Menu -->
+                    <div class="menu-category active" id="andhra-meals">
+                        <div class="menu-category-header">
+                            <h3>ANDHRA MEALS</h3>
+                            <p>Authentic Andhra style meals with traditional accompaniments</p>
+                        </div>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Full Meals (unlimited)</h4>
+                                    <span class="price">₹119</span>
+                                </div>
+                                <p class="description">Flavoured Rice, White Rice, Dry/Dum Curry, Gravy Curry, Oil Fry, Pappu, Rasam, Sambar, Majjiga Pulusu, Curd, Fryums, Sweet</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Plate Meals (single serve)</h4>
+                                    <span class="price">₹89</span>
+                                </div>
+                                <p class="description">Flavoured Rice, White Rice, Dry/Dum Curry, Gravy Curry, Oil Fry, Pappu, Rasam, Sambar, Majjiga Pulusu, Curd, Fryums, Sweet</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Mini Meals</h4>
+                                    <span class="price">₹69</span>
+                                </div>
+                                <p class="description">Flavoured Rice, Sambar Rice, Gravy Curry, Curd Rice, Raita</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Biryanis Menu -->
+                    <div class="menu-category" id="biryanis">
+                        <div class="menu-category-header">
+                            <h3>BIRYANIS</h3>
+                            <p>Authentic Andhra style biryanis with aromatic spices</p>
+                        </div>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Chicken Fry Biryani</h4>
+                                    <span class="price">₹139</span>
+                                </div>
+                                <p class="description">Flavorful biryani with tender chicken fry pieces and aromatic basmati rice</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Chicken Dum Biryani</h4>
+                                    <span class="price">₹149</span>
+                                </div>
+                                <p class="description">Slow-cooked biryani with succulent chicken and fragrant spices</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Gongura Chicken Biryani</h4>
+                                    <span class="price">₹169</span>
+                                </div>
+                                <p class="description">Unique biryani prepared with tangy gongura leaves and chicken</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Gongura Prawn Biryani</h4>
+                                    <span class="price">₹199</span>
+                                </div>
+                                <p class="description">Delicious biryani with fresh prawns and sour gongura leaves</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Andhra Curries Menu -->
+                    <div class="menu-category" id="curries">
+                        <div class="menu-category-header">
+                            <h3>ANDHRA CURRIES</h3>
+                            <p>Spicy and flavorful curries from the Andhra region</p>
+                        </div>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Egg Curry</h4>
+                                    <span class="price">₹69</span>
+                                </div>
+                                <p class="description">Boiled eggs cooked in a spicy Andhra style gravy</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Chicken Curry</h4>
+                                    <span class="price">₹99</span>
+                                </div>
+                                <p class="description">Tender chicken pieces cooked in traditional Andhra spices</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Fish Curry</h4>
+                                    <span class="price">₹99</span>
+                                </div>
+                                <p class="description">Fresh fish cooked with tangy tamarind and spicy masala</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Mutton Curry</h4>
+                                    <span class="price">₹149</span>
+                                </div>
+                                <p class="description">Slow-cooked mutton in a rich, spicy gravy with authentic flavors</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Prawns Curry</h4>
+                                    <span class="price">₹169</span>
+                                </div>
+                                <p class="description">Juicy prawns cooked in spicy Andhra style gravy</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Starters Menu -->
+                    <div class="menu-category" id="starters">
+                        <div class="menu-category-header">
+                            <h3>ANDHRA STARTERS</h3>
+                            <p>Spicy and delicious starters from Andhra cuisine</p>
+                        </div>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Egg Burji</h4>
+                                    <span class="price">₹69</span>
+                                </div>
+                                <p class="description">Spicy scrambled eggs cooked with onions, tomatoes and green chilies</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Chicken Vepudu</h4>
+                                    <span class="price">₹129</span>
+                                </div>
+                                <p class="description">Dry fried chicken with authentic Andhra spices and curry leaves</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Fish Vepudu</h4>
+                                    <span class="price">₹129</span>
+                                </div>
+                                <p class="description">Crispy fried fish pieces marinated in special Andhra masala</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Mutton Vepudu</h4>
+                                    <span class="price">₹199</span>
+                                </div>
+                                <p class="description">Tender mutton pieces dry fried with special spice blend</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>Prawn Vepudu</h4>
+                                    <span class="price">₹199</span>
+                                </div>
+                                <p class="description">Stir-fried prawns with authentic Andhra spices and herbs</p>
+                                <span class="spice-level"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Extras Menu -->
+                    <div class="menu-category" id="extras">
+                        <div class="menu-category-header">
+                            <h3>EXTRAS & BEVERAGES</h3>
+                            <p>Additional items and refreshing beverages</p>
+                        </div>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>COMBOS</h4>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Rice + Chicken Curry + Buttermilk</h5>
+                                    <span class="price">₹129</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Rice + Fish Curry + Buttermilk</h5>
+                                    <span class="price">₹129</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Rice + Mutton Curry + Buttermilk</h5>
+                                    <span class="price">₹199</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Rice + Prawns Curry + Buttermilk</h5>
+                                    <span class="price">₹199</span>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>RICE VARIETIES</h4>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>White Rice</h5>
+                                    <span class="price">₹39</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Flavoured Rice</h5>
+                                    <span class="price">₹59</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Sambar Rice</h5>
+                                    <span class="price">₹59</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Curd Rice</h5>
+                                    <span class="price">₹59</span>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    <h4>BEVERAGES</h4>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Water Bottle (1 LTR)</h5>
+                                    <span class="price">₹20</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>SoftDrink (250ML)</h5>
+                                    <span class="price">₹20</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Buttermilk</h5>
+                                    <span class="price">₹29</span>
+                                </div>
+                                <div class="menu-item-header">
+                                    <h5>Lassi</h5>
+                                    <span class="price">₹39</span>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Contact Us</h2>
+                    <div class="decorative-divider">
+                        <svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0,5 C25,0 25,10 50,5 C75,0 75,10 100,5" fill="none" stroke="#8B4513" stroke-width="1"/>
+                            <circle cx="50" cy="5" r="3" fill="#DA7635"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-map">
+                        <div id="restaurant-map"></div>
+                        <div class="map-frame"></div>
+                    </div>
+                    
+                    <div class="contact-text">
+                        <h3>Visit <span class="highlight">Our Restaurant</span></h3>
+                        <p>Bus Stop, beside Bank Of India, near Madhavadhara, Tenneti Nagar, Muralinagar, Madhavadhara, Visakhapatnam, Andhra Pradesh 530007</p>
+                        
+                        <h3>Our <span class="highlight">Hours</span></h3>
+                        <p>We welcome you every day of the week to experience our authentic village flavors. Our doors are open from 11:00 AM to 11:00 PM, so you can enjoy our delicious offerings at your convenience.</p>
+                        
+                        <div class="contact-highlights">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h4>Easy to Find</h4>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <h4>Open Daily</h4>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-utensils"></i>
+                                <h4>Authentic Cuisine</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Mana Oori Ruchulu</h2>
+                    <p>Authentic Indian Village Cuisine</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#menu">Menu</a></li>
+
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mana Oori Ruchulu. All Rights Reserved.</p>
+                <div class="footer-policies">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Container -->
+    <div id="lightbox-container" class="lightbox-container">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-top" class="scroll-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Script Sources -->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="lightbox.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
